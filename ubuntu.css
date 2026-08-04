@@ -1,0 +1,343 @@
+/* ═══════════════════════════════════════════
+   ubuntu.css — Ubuntu 22.04 Desktop Theme
+   ═══════════════════════════════════════════ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --ubuntu-orange:  #E95420;
+  --ubuntu-purple:  #300A24;
+  --ubuntu-dark:    #1a1a2e;
+  --ubuntu-panel:   rgba(16, 16, 32, 0.88);
+  --ubuntu-window:  #2c2c3e;
+  --ubuntu-titlebar: #1e1e30;
+  --ubuntu-text:    #f0f0f0;
+  --ubuntu-muted:   #a0a0bc;
+  --ubuntu-border:  rgba(255,255,255,0.12);
+  --ubuntu-accent:  #E95420;
+  --ubuntu-green:   #22c55e;
+  --ubuntu-yellow:  #f59e0b;
+  --ubuntu-red:     #e05c5c;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14px;
+  color: var(--ubuntu-text);
+}
+
+/* ── Wallpaper ── */
+.desktop {
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(ellipse at 30% 40%, #4b1a6a 0%, #300A24 40%, #1a0a2e 70%, #0e0a1e 100%);
+  position: relative;
+  user-select: none;
+}
+
+/* ── Top bar ── */
+.topbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 32px;
+  background: var(--ubuntu-panel);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  z-index: 9000;
+  border-bottom: 1px solid var(--ubuntu-border);
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+.topbar__activities {
+  font-weight: 700;
+  color: var(--ubuntu-text);
+  cursor: pointer;
+  letter-spacing: 0.03em;
+}
+
+.topbar__title {
+  color: var(--ubuntu-muted);
+  font-size: 0.78rem;
+}
+
+.topbar__right {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.topbar__indicator {
+  font-size: 0.75rem;
+  color: var(--ubuntu-text);
+}
+
+/* ── Desktop icon grid ── */
+.desktop__icons {
+  position: absolute;
+  top: 48px;
+  left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 100;
+}
+
+.desk-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  background: none;
+  border: 1.5px solid transparent;
+  border-radius: 8px;
+  padding: 0.6rem 0.5rem;
+  cursor: pointer;
+  width: 80px;
+  transition: background 0.15s, border-color 0.15s;
+  color: var(--ubuntu-text);
+}
+
+.desk-icon:hover, .desk-icon:focus {
+  background: rgba(233, 84, 32, 0.18);
+  border-color: var(--ubuntu-orange);
+  outline: none;
+}
+
+.desk-icon:active { background: rgba(233, 84, 32, 0.3); }
+
+.desk-icon__img  { font-size: 2rem; line-height: 1; }
+
+.desk-icon__label {
+  font-size: 0.7rem;
+  text-align: center;
+  color: var(--ubuntu-text);
+  line-height: 1.3;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.8);
+  word-break: break-word;
+}
+
+/* ── Window layer ── */
+.windows-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 500;
+}
+
+/* ── Individual window ── */
+.win {
+  position: absolute;
+  background: var(--ubuntu-window);
+  border-radius: 10px;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.7), 0 2px 8px rgba(0,0,0,0.4);
+  border: 1px solid var(--ubuntu-border);
+  display: flex;
+  flex-direction: column;
+  min-width: 340px;
+  min-height: 220px;
+  pointer-events: all;
+  overflow: hidden;
+  resize: both;
+  transition: box-shadow 0.2s;
+}
+
+.win.is-focused {
+  box-shadow: 0 28px 90px rgba(0,0,0,0.8), 0 2px 8px rgba(0,0,0,0.5);
+}
+
+/* Title bar — Ubuntu GNOME style: title left, controls right */
+.win__titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.6rem 0 0.85rem;
+  height: 36px;
+  background: var(--ubuntu-titlebar);
+  border-bottom: 1px solid var(--ubuntu-border);
+  cursor: grab;
+  flex-shrink: 0;
+}
+
+.win__titlebar:active { cursor: grabbing; }
+
+.win__title {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--ubuntu-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+  flex: 1;
+  padding-right: 0.5rem;
+}
+
+/* Controls on the right — Ubuntu/Yaru dark style */
+.win__controls {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.win__btn {
+  width: 26px;
+  height: 22px;
+  border-radius: 5px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.07);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--ubuntu-muted);
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.win__btn:hover {
+  background: rgba(255,255,255,0.15);
+  color: var(--ubuntu-text);
+  border-color: rgba(255,255,255,0.25);
+}
+
+/* Close button gets a subtle red tint on hover — Ubuntu convention */
+.win__btn--close:hover {
+  background: rgba(220, 80, 60, 0.6);
+  border-color: rgba(220,80,60,0.8);
+  color: #fff;
+}
+
+/* Window body */
+.win__body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.5rem;
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: var(--ubuntu-text);
+  scrollbar-width: thin;
+  scrollbar-color: var(--ubuntu-border) transparent;
+}
+
+.win__body h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--ubuntu-orange);
+  margin-bottom: 1rem;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.win__body h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ubuntu-text);
+  margin: 1rem 0 0.4rem;
+}
+
+.win__body p { color: var(--ubuntu-muted); margin-bottom: 0.75rem; }
+
+.win__body strong { color: var(--ubuntu-text); }
+
+.win__body a {
+  color: var(--ubuntu-orange);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.win__body ul { list-style: disc; padding-left: 1.2rem; color: var(--ubuntu-muted); }
+.win__body li { margin-bottom: 0.3rem; }
+
+.win__tag {
+  display: inline-block;
+  background: rgba(233, 84, 32, 0.15);
+  border: 1px solid rgba(233, 84, 32, 0.3);
+  color: var(--ubuntu-orange);
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 0.68rem;
+  border-radius: 4px;
+  padding: 0.15rem 0.5rem;
+  margin: 0.15rem 0.15rem 0.15rem 0;
+}
+
+/* Terminal window */
+.win__terminal {
+  background: #0f0f17;
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--ubuntu-green);
+  padding: 1rem;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.term-line { margin-bottom: 0.1rem; }
+.term-prompt { color: var(--ubuntu-orange); }
+.term-output { color: var(--ubuntu-muted); }
+
+/* ── Dock ── */
+.dock {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(20, 20, 36, 0.82);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--ubuntu-border);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.45rem 0.75rem;
+  z-index: 9000;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+}
+
+.dock__item {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.7rem;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  transition: transform 0.15s, background 0.15s;
+  position: relative;
+}
+
+.dock__item:hover {
+  transform: translateY(-8px) scale(1.15);
+  background: rgba(255,255,255,0.08);
+}
+
+.dock__item.is-open::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--ubuntu-orange);
+}
+
+.dock__divider {
+  width: 1px;
+  height: 36px;
+  background: var(--ubuntu-border);
+  margin: 0 0.25rem;
+}

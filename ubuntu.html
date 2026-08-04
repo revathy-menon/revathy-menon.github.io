@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Revathy Menon — Desktop Environment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="ubuntu.css" />
+</head>
+<body class="desktop">
+
+  <!-- Top bar -->
+  <div class="topbar" id="topbar">
+    <span class="topbar__activities">Activities</span>
+    <span class="topbar__title" id="topbar-app-name">Revathy Menon — Desktop</span>
+    <div class="topbar__right">
+      <span class="topbar__indicator" id="topbar-time"></span>
+      <span class="topbar__indicator">🔋 100%</span>
+      <span class="topbar__indicator">🔊</span>
+    </div>
+  </div>
+
+  <!-- Desktop icon grid -->
+  <main class="desktop__icons" id="desktop-icons">
+    <button class="desk-icon" data-window="about" id="icon-about">
+      <span class="desk-icon__img">👤</span>
+      <span class="desk-icon__label">About Me</span>
+    </button>
+    <button class="desk-icon" data-window="research" id="icon-research">
+      <span class="desk-icon__img">🔬</span>
+      <span class="desk-icon__label">Research</span>
+    </button>
+    <button class="desk-icon" data-window="publications" id="icon-publications">
+      <span class="desk-icon__img">📄</span>
+      <span class="desk-icon__label">Publications</span>
+    </button>
+    <button class="desk-icon" data-window="skills" id="icon-skills">
+      <span class="desk-icon__img">⚙️</span>
+      <span class="desk-icon__label">Skills</span>
+    </button>
+    <button class="desk-icon" data-window="terminal" id="icon-terminal">
+      <span class="desk-icon__img">🖥️</span>
+      <span class="desk-icon__label">Terminal</span>
+    </button>
+    <button class="desk-icon" data-window="contact" id="icon-contact">
+      <span class="desk-icon__img">✉️</span>
+      <span class="desk-icon__label">Contact</span>
+    </button>
+    <button class="desk-icon" id="icon-back" onclick="window.location='index.html'">
+      <span class="desk-icon__img">🌐</span>
+      <span class="desk-icon__label">Back to Site</span>
+    </button>
+  </main>
+
+  <!-- Windows container -->
+  <div class="windows-layer" id="windows-layer"></div>
+
+  <!-- Dock -->
+  <nav class="dock" id="dock" aria-label="Dock">
+    <button class="dock__item" data-window="about"        title="About Me">👤</button>
+    <button class="dock__item" data-window="research"     title="Research">🔬</button>
+    <button class="dock__item" data-window="publications" title="Publications">📄</button>
+    <button class="dock__item" data-window="skills"       title="Skills">⚙️</button>
+    <button class="dock__item" data-window="terminal"     title="Terminal">🖥️</button>
+    <button class="dock__item" data-window="contact"      title="Contact">✉️</button>
+    <div class="dock__divider"></div>
+    <button class="dock__item" onclick="window.location='index.html'" title="Back to portfolio">🌐</button>
+  </nav>
+
+  <script src="ubuntu.js"></script>
+</body>
+</html>

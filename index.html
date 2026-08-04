@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Revathy Menon</title>
+  <meta name="description"
+    content="Portfolio of Revathy Menon — PhD Candidate at NCBS-TIFR specialising in computational structural biology, machine learning, and protein-protein interaction analysis." />
+  <meta name="author" content="Revathy Menon" />
+  <meta name="keywords"
+    content="Revathy Menon, computational biology, machine learning, structural biology, portfolio, NCBS, TIFR" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Revathy Menon" />
+  <meta property="og:description"
+    content="Exploring protein-protein interactions through computational approaches — structural databases, ML-augmented docking, and biological case studies." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ═══════════════════════  NAVIGATION  ═══════════════════════ -->
+  <nav class="nav" id="navbar">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo">RM</a>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li class="nav__parent">
+          <a href="#what-i-do" class="nav__parent-link"> My Work</a>
+          <ul class="nav__children">
+            <li><a href="#what-i-do" data-tab="work" class="nav__child-link">Research &amp; projects</a></li>
+            <li><a href="#what-i-do" data-tab="publications" class="nav__child-link">Publications</a></li>
+            <li><a href="#what-i-do" data-tab="scicomm" class="nav__child-link">Beyond Research</a></li>
+            <li><a href="#what-i-do" data-tab="playground" class="nav__child-link">Playground</a></li>
+          </ul>
+        </li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#art">Art</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="./Revathy_Menon_CV.pdf" class="nav__cv-link" id="nav-cv" target="_blank" rel="noopener noreferrer"
+            aria-label="Download CV">cv ↗</a></li>
+      </ul>
+      <div class="nav__actions">
+
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+          <span class="theme-toggle__icon theme-toggle__icon--sun">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5" />
+              <line x1="12" y1="1" x2="12" y2="3" />
+              <line x1="12" y1="21" x2="12" y2="23" />
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+              <line x1="1" y1="12" x2="3" y2="12" />
+              <line x1="21" y1="12" x2="23" y2="12" />
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </svg>
+          </span>
+          <span class="theme-toggle__icon theme-toggle__icon--moon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+          </span>
+        </button>
+        <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════  HERO  ═══════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero__layout">
+      <!-- 
+      <div class="hero__inner">
+        PHOTO: Replace the src below with your own image path when ready 
+        Example: src="./your-photo.jpg"
+        <div class="hero__photo-wrap reveal">
+          <img src="./placeholders/808-200x300.jpg" alt="Portrait of Revathy Menon" class="hero__photo"
+            loading="eager" />
+        </div> -->
+
+      <div class="hero__content">
+        <p class="hero__greeting reveal">Hello, I'm</p>
+        <!-- <div class="status-pill reveal reveal--delay-1" id="status-pill">
+            <span class="status-pill__dot" aria-hidden="true"></span>
+            OPEN TO OPPORTUNITIES &middot; 2026
+          </div> -->
+        <h1 class="hero__name reveal reveal--delay-2">Revathy</h1>
+        <p class="hero__title reveal reveal--delay-3">PhD Candidate &middot; Computational Structural Biology</p>
+        <p class="hero__subtitle reveal reveal--delay-4">
+          Exploring protein-protein interactions through computational lenses:
+          from structural databases and ML-augmented docking to biological case studies
+          in innate immunity and cytoskeletal assemblies.
+        </p>
+      </div>
+    </div>
+
+    <!-- CTA buttons span full width below the two-column grid -->
+    <div class="hero__cta reveal reveal--delay-5">
+      <a href="#work" class="btn btn--primary">View my work</a>
+      <a href="#contact" class="btn btn--outline">Get in touch</a>
+      <a href="./Revathy_Menon_CV.pdf" class="btn btn--cv" id="hero-cv" download="Revathy_Menon_CV.pdf" target="_blank"
+        rel="noopener noreferrer" aria-label="Download CV as PDF">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+          <polyline points="7 10 12 15 17 10" />
+          <line x1="12" y1="15" x2="12" y2="3" />
+        </svg>
+        Download CV
+      </a>
+    </div>
+    <br>
+    </div>
+    <div class="hero__scroll-indicator reveal reveal--delay-5" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════  ABOUT  ═══════════════════════ -->
+  <section class="section about" id="about">
+    <div class="container">
+      <span class="section__label reveal">About</span>
+      <h2 class="section__heading reveal">Building at the intersection of<br />biology &amp; computation</h2>
+      <div class="about__grid">
+        <div class="about__text reveal">
+          <p style="text-align: justify;">
+            I'm a computational biology PhD candidate (thesis submitted) at the <strong>National Centre for Biological
+              Sciences (NCBS-TIFR)</strong>, Bangalore, in the lab of Prof. Ramanathan Sowdhamini.
+            My research merges structural bioinformatics, machine learning, and molecular modeling
+            — balancing rigorous algorithmic engineering with practical impact and effective storytelling.
+          </p>
+        </div>
+        <div class="about__details reveal">
+          <!-- <div class="about__detail-item">
+            <span class="about__detail-label">Institution</span>
+            <span class="about__detail-value">NCBS-TIFR, Bangalore</span>
+          </div>
+          <div class="about__detail-item">
+            <span class="about__detail-label">Degree</span>
+            <span class="about__detail-value">PhD Biological Sciences (thesis submitted)</span>
+          </div>
+          <div class="about__detail-item">
+            <span class="about__detail-label">Prior Education</span>
+            <span class="about__detail-value">Integrated BS-MS, IISER Tirupati</span>
+          </div> -->
+          <!-- <div class="about__detail-item">
+            <span class="about__detail-label">Competitive Rank</span>
+            <span class="about__detail-value">CSIR-NET JRF — AIR 65 (Top 0.1%)</span>
+          </div> -->
+          <div class="about__detail-item">
+            <span class="about__detail-label">Publications</span>
+            <span class="about__detail-value">6 peer-reviewed (3 co-first author)</span>
+          </div>
+          <div class="about__detail-item">
+            <span class="about__detail-label">Languages</span>
+            <span class="about__detail-value">English · Hindi · Malayalam · Bengali</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════  WHAT I DO  ═══════════════════════ -->
+  <section class="section what-i-do" id="what-i-do">
+    <div class="container">
+      <span class="section__label reveal">My Work</span>
+      <h2 class="section__heading reveal">Projects, Papers, Engagement, &amp; Whimsy ✨</h2>
+
+      <!-- Tab strip -->
+      <div class="wid-tabs reveal" role="tablist" aria-label="What I Do tabs">
+        <button class="wid-tab wid-tab--active" data-tab="work" role="tab" aria-selected="true"
+          aria-controls="wid-panel-work" id="wid-btn-work">Research &amp; projects</button>
+        <button class="wid-tab" data-tab="publications" role="tab" aria-selected="false"
+          aria-controls="wid-panel-publications" id="wid-btn-publications">Publications</button>
+        <button class="wid-tab" data-tab="scicomm" role="tab" aria-selected="false" aria-controls="wid-panel-scicomm"
+          id="wid-btn-scicomm">Beyond Research</button>
+        <button class="wid-tab" data-tab="playground" role="tab" aria-selected="false"
+          aria-controls="wid-panel-playground" id="wid-btn-playground">Playground</button>
+      </div>
+
+      <!-- ─── Panel 1: Research & Projects ─── -->
+      <div class="wid-panel wid-panel--active" id="wid-panel-work" role="tabpanel" aria-labelledby="wid-btn-work">
+
+        <p class="section__subheading" style="margin-bottom: 2.5rem;">
+          What I have been working on during my PhD, from my main research to team collaborations.
+        </p>
+
+        <div class="work__grid">
+
+          <!-- Card 1 — DockScore 2.0 -->
+          <article class="card reveal" id="card-dockscore">
+            <div class="card__tag">Machine Learning · Docking</div>
+            <h3 class="card__title">DockScore 2.0</h3>
+            <p class="card__desc">
+              ML-augmented protein–protein docking scorer. Benchmarked XGBoost, Random Forest, SVMs, and
+              knowledge-distilled neural networks across 257 complexes and 100K+ decoys — achieving an F1 of 0.91 and
+              Spearman's ρ of 0.70.
+            </p>
+            <ul class="card__tech">
+              <li>Python</li>
+              <li>XGBoost</li>
+              <li>GNNs</li>
+              <li>LightDock</li>
+              <li>CAPRI/DockQ</li>
+            </ul>
+            <div class="card__expand" id="expand-dockscore" aria-hidden="true">
+              <div class="card__expand-inner">
+                <div class="card__expand-row"><span class="card__expand-label">Approach</span>
+                  <p>Recoded the original Perl-based DockScore in Python, computing six normalised interface descriptors
+                    (ISA, residue conservation via PSSMs, short contacts, hydrophobicity, spatial clustering, positive
+                    residues). Extended benchmarking to Docking Benchmark v5 with LightDock-generated ensembles;
+                    addressed
+                    class imbalance via SMOTE and down-sampling.</p>
+                </div>
+                <div class="card__expand-row"><span class="card__expand-label">Highlight</span>
+                  <p>Best classification achieved via knowledge distillation — a neural network trained to imitate
+                    XGBoost
+                    using Huber loss (λ = 0.25) — reaching <strong>F1 = 0.91, PR AUC = 0.99</strong>. Also explored
+                    graph
+                    neural networks with residue-level interface graphs and margin-ranking loss. Poster selected for
+                    <strong>EMBL AI and Biology Conference, Heidelberg (March 2026)</strong>; ₹50,000 Infosys travel
+                    grant
+                    received.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="card__meta">
+              <span>EMBL Heidelberg Poster · 2026</span>
+              <button class="card__toggle" aria-expanded="false" aria-controls="expand-dockscore"
+                id="toggle-dockscore">show details</button>
+            </div>
+          </article>
+
+          <!-- Card 2 — PASS2 -->
+          <article class="card reveal" id="card-pass2">
+            <div class="card__tag">Database · Bioinformatics</div>
+            <h3 class="card__title">PASS2 v8 Database</h3>
+            <p class="card__desc">
+              Led the update of PASS2 — a database of structure-based sequence alignments covering 26,690 protein
+              domains
+              across 2,058 superfamilies. Achieved a 90.4% pipeline success rate and resolved 79 problematic
+              superfamilies
+              with k-means clustering.
+            </p>
+            <ul class="card__tech">
+              <li>Python</li>
+              <li>HMMER</li>
+              <li>MariaDB</li>
+              <li>PHP</li>
+              <li>BioPython</li>
+            </ul>
+            <div class="card__expand" id="expand-pass2" aria-hidden="true">
+              <div class="card__expand-inner">
+                <div class="card__expand-row"><span class="card__expand-label">Approach</span>
+                  <p>Drove the end-to-end automated pipeline for 1,244 multi-member superfamilies (SCOPe 2.08; &lt;40%
+                    pairwise sequence identity). Integrated per-superfamily features: HMMs (HMMER), conserved residues,
+                    secondary structural motifs (Smotif), alignment statistics (AliStat), indel profiles (CUSP),
+                    intra-domain interaction networks (HORI), GO annotations, and putative interactors (STRING-DB).</p>
+                </div>
+                <div class="card__expand-row"><span class="card__expand-label">Highlight</span>
+                  <p>Implemented k-means clustering (elbow method; WCSS-based k selection) to recover <strong>79
+                      problematic superfamilies</strong> with &gt;50% gap content or &lt;40% secondary structure
+                    conservation — clusters aligned with known family-level annotations including CoA-dependent acyl
+                    transferases and Histone-fold superfamilies.</p>
+                </div>
+              </div>
+            </div>
+            <div class="card__meta">
+              <span>Published · Database Journal, 2025</span>
+              <div class="card__meta-links">
+                <a href="https://doi.org/10.1093/database/baaf072" class="card__doi" target="_blank"
+                  rel="noopener noreferrer">View Paper ↗</a>
+                <button class="card__toggle" aria-expanded="false" aria-controls="expand-pass2" id="toggle-pass2">show
+                  details</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 — Actin–Tropomyosin -->
+          <article class="card reveal" id="card-actintpm">
+            <div class="card__tag">Molecular Modelling · Collaboration</div>
+            <h3 class="card__title">Actin–Tropomyosin Interface</h3>
+            <p class="card__desc">
+              Modelled the actin–tropomyosin interface across human and yeast isoforms using AlphaFold2-Multimer and
+              iterative LightDock docking. Revealed a conserved electrostatic anchor mechanism and support for a
+              "gestalt-binding"
+              model for filament length dependence.
+            </p>
+            <ul class="card__tech">
+              <li>AlphaFold2</li>
+              <li>LightDock</li>
+              <li>FoldX</li>
+              <li>PPCheck</li>
+              <li>PyMol</li>
+            </ul>
+            <div class="card__expand" id="expand-actintpm" aria-hidden="true">
+              <div class="card__expand-inner">
+                <div class="card__expand-row"><span class="card__expand-label">Approach</span>
+                  <p>Modelled hTPM1, hTPM4 and <em>S. pombe</em> CDC8 coiled-coil homodimers via AlphaFold2-Multimer;
+                    selected by PPCheck pseudo-energies + pLDDT. Performed iterative LightDock docking (200 swarms, 10
+                    decoys/swarm, 1,000 GSO steps) per actin subunit. Built CDC8 temperature-sensitive mutants (A18T,
+                    R21H, E31K, E129K) in PyMol; energy-minimised with FoldX.</p>
+                </div>
+                <div class="card__expand-row"><span class="card__expand-label">Highlight</span>
+                  <p>Identified a <strong>conserved acidic hotspot</strong> (D254/hTPM1, D218/hTPM4, D131/pCDC8) forming
+                    salt bridges across all isoforms and species. Established an energetic hierarchy (pCDC8 &gt; hTPM1
+                    &gt; hTPM4) supporting a <strong>"gestalt-binding" model</strong>: shorter filaments incur fewer
+                    geometric penalties. Collaboration with Dr. Mohan Balasubramanian, University of Warwick.</p>
+                </div>
+              </div>
+            </div>
+            <div class="card__meta">
+              <div class="card__meta-links">
+                <span>bioRxiv · 2026</span>
+                <br>
+                <a href="https://doi.org/10.64898/2026.07.06.736648" class="card__doi" target="_blank"
+                  rel="noopener noreferrer">View preprint ↗</a>
+              </div>
+              <button class="card__toggle" aria-expanded="false" aria-controls="expand-actintpm"
+                id="toggle-actintpm">show details</button>
+            </div>
+          </article>
+
+          <!-- Card 4 — TRAM -->
+          <article class="card reveal" id="card-tram">
+            <div class="card__tag">MD Simulations · Immunology</div>
+            <h3 class="card__title">TRAM Dimer Interface Mutations</h3>
+            <p class="card__desc">
+              Investigated how dominant-negative mutations at the TRAM homodimer interface abrogate innate immune
+              signalling. 200 ns MD simulations revealed elevated communication propensity, loss of conserved cliques,
+              and
+              prolonged allosteric paths in mutants.
+            </p>
+            <ul class="card__tech">
+              <li>GROMACS</li>
+              <li>HADDOCK</li>
+              <li>MDM-TASK</li>
+              <li>PSN-Ensemble</li>
+              <li>NAPS</li>
+            </ul>
+            <div class="card__expand" id="expand-tram" aria-hidden="true">
+              <div class="card__expand-inner">
+                <div class="card__expand-row"><span class="card__expand-label">Approach</span>
+                  <p>WT/mutant dimers (P116H, C117H) built from the NMR structure (PDB: 2M1W); HADDOCK-modelled
+                    complexes
+                    (1,000 structures, 9 clusters); <strong>200 ns MD × 3 replicates</strong> in GROMACS. Dynamic
+                    Cross-Correlation and Communication Propensity computed via MDM-TASK; Protein Structural Network
+                    analysis via PSN-Ensemble; allosteric path analysis via NAPS.</p>
+                </div>
+                <div class="card__expand-row"><span class="card__expand-label">Highlight</span>
+                  <p>Mutant dimers showed elevated CP, increased radius of gyration, <strong>loss of conserved
+                      cliques</strong> (WT: 1; mutants: 0), and prolonged allosteric shortest paths between functional
+                    sites — providing a structural basis for abrogated TRIF recruitment. Certified among the <strong><a
+                        href="https://www.linkedin.com/posts/revathy-menon_proteins-structuralbiology-bioinformatics-activity-7462006732001820672-_6aH"
+                        target="_blank" rel="noopener noreferrer">top 10% most-viewed papers</a></strong> published in
+                    <em>Proteins</em> (Jan–Dec 2024).
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="card__meta">
+              <span>Published · Proteins, 2024</span>
+              <div class="card__meta-links">
+                <a href="https://doi.org/10.1002/prot.26707" class="card__doi" target="_blank"
+                  rel="noopener noreferrer">View Paper ↗</a>
+                <button class="card__toggle" aria-expanded="false" aria-controls="expand-tram" id="toggle-tram">show
+                  details</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5 — Bifurcated -->
+          <article class="card reveal" id="card-bifurcated">
+            <div class="card__tag">Structural Analysis · Co-first Author</div>
+            <h3 class="card__title">Bifurcated Inter-Protein Interactions</h3>
+            <p class="card__desc">
+              Comprehensive computational analysis of bifurcated inter-protein interactions across PDB assemblies —
+              demonstrating their pivotal role in conferring complex stability. Co-first author publication with IISc
+              collaborators.
+            </p>
+            <ul class="card__tech">
+              <li>Python</li>
+              <li>BioPython</li>
+              <li>PDB</li>
+              <li>Statistical Analysis</li>
+            </ul>
+            <div class="card__expand" id="expand-bifurcated" aria-hidden="true">
+              <div class="card__expand-inner">
+                <div class="card__expand-row"><span class="card__expand-label">Approach</span>
+                  <p>Large-scale computational survey of bifurcated inter-protein interactions across PDB assemblies.
+                    Originated as an MS thesis project at IISER Tirupati (supervised by Prof. N. Srinivasan, IISc and
+                    Dr.
+                    Sreenivas Chavali) and extended to a full publication in collaboration with Dr. Sneha Bheemireddy
+                    (IISc).</p>
+                </div>
+                <div class="card__expand-row"><span class="card__expand-label">Highlight</span>
+                  <p>Demonstrated that bifurcated interactions — where a single residue simultaneously contacts two
+                    partners — play a <strong>pivotal role in protein complex stability</strong>. This MS-thesis-derived
+                    work reached co-first-author publication in <em>Proteins: Structure, Function, and
+                      Bioinformatics</em>
+                    (2025).</p>
+                </div>
+              </div>
+            </div>
+            <div class="card__meta">
+              <span>Published · Proteins, 2025</span>
+              <div class="card__meta-links">
+                <a href="https://doi.org/10.1002/prot.70090" class="card__doi" target="_blank"
+                  rel="noopener noreferrer">View Paper ↗</a>
+                <button class="card__toggle" aria-expanded="false" aria-controls="expand-bifurcated"
+                  id="toggle-bifurcated">show details</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6 — RNA-seq -->
+          <article class="card reveal" id="card-rnaseq">
+            <div class="card__tag">Transcriptomics · Pipeline</div>
+            <h3 class="card__title">RNA-seq Transcriptomic Profiling</h3>
+            <p class="card__desc">
+              Engineered an end-to-end bulk RNA-seq analysis pipeline — from quality control (FastQC) and alignment
+              (HISAT2) to assembly (StringTie) and differential expression (DESeq2). Generated publication-quality
+              volcano
+              plots and statistical visualisations.
+            </p>
+            <ul class="card__tech">
+              <li>R</li>
+              <li>DESeq2</li>
+              <li>HISAT2</li>
+              <li>StringTie</li>
+              <li>FastQC</li>
+            </ul>
+            <div class="card__expand" id="expand-rnaseq" aria-hidden="true">
+              <div class="card__expand-inner">
+                <div class="card__expand-row"><span class="card__expand-label">Approach</span>
+                  <p>Designed an end-to-end bulk RNA-seq pipeline: rigorous QC (FastQC), read alignment (HISAT2),
+                    transcriptome assembly (StringTie), and differential gene expression analysis (DESeq2 in R).
+                    Familiar
+                    with alternative frameworks including edgeR and limma for parametric and empirical Bayes modelling.
+                  </p>
+                </div>
+                <div class="card__expand-row"><span class="card__expand-label">Highlight</span>
+                  <p>Applied to transcriptomic profiling in the <strong>L-DOPA biosynthesis pathway</strong>. Generated
+                    publication-quality volcano plots and statistical visualisations communicating DEG results.
+                    Manuscript
+                    currently under review.</p>
+                </div>
+              </div>
+            </div>
+            <div class="card__meta">
+              <span>Manuscript Under Review</span>
+              <button class="card__toggle" aria-expanded="false" aria-controls="expand-rnaseq" id="toggle-rnaseq">show
+                details</button>
+            </div>
+          </article>
+
+        </div><!-- /work__grid -->
+
+        <!-- Posters & Talks -->
+        <div class="talks" style="margin-top: 4rem;">
+          <h3 class="talks__heading">Posters &amp; Talks</h3>
+          <div class="talks__list">
+
+            <div class="talks__item">
+              <span class="talks__year">2026</span>
+              <div class="talks__body">
+                <p class="talks__title">DockScore 2.0: interpretable quality assessment for protein&ndash;protein
+                  docking
+                  ensembles</p>
+                <p class="talks__meta">Poster &mdash; <strong>EMBL AI and Biology Conference</strong>, Heidelberg,
+                  Germany
+                  &middot; March 10&ndash;13, 2026 &middot; ₹50,000 Infosys travel grant
+                  <a href="https://www.embl.org/about/info/course-and-conference-office/events/aib26-01/"
+                    class="scicomm__link" target="_blank" rel="noopener noreferrer"
+                    aria-label="EMBL conference page">&#x2197;</a>
+                </p>
+              </div>
+            </div>
+
+
+            <div class="talks__item">
+              <span class="talks__year">2025</span>
+              <div class="talks__body">
+                <p class="talks__title">A stitch unravels the seam: how point mutations abrogate the TRAM signalling
+                  pathway</p>
+                <p class="talks__meta">Poster &mdash; <strong>NCBS Annual Talks</strong>, Bengaluru,
+                  India
+                  &middot; January 15&ndash;17, 2025 &middot;
+                  <a href="https://drive.google.com/file/d/1qA7D_M__SNgnzWKBMgGLU-YHegLUwBm6/view?usp=sharin"
+                    class="scicomm__link" target="_blank" rel="noopener noreferrer" aria-label="poster">&#x2197;</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="talks__item">
+              <span class="talks__year">2023 - 2025</span>
+              <div class="talks__body">
+                <p class="talks__title">Annual Institute Research Seminars</p>
+                <p class="talks__meta">Cross-disciplinary talks to computational, theory, experimental, and ecology
+                  audiences &mdash; <strong>NCBS-TIFR</strong> &middot;
+                  <br> 3 July 2023, 19 August 2024, and 22 September 2025.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div><!-- /talks -->
+
+      </div><!-- /wid-panel-work -->
+
+      <!-- ─── Panel 2: Publications ─── -->
+      <div class="wid-panel" id="wid-panel-publications" role="tabpanel" aria-labelledby="wid-btn-publications"
+        aria-hidden="true">
+
+        <p class="section__subheading" style="margin-bottom: 2.5rem;">
+          Peer-reviewed papers, book chapters, and preprints.
+        </p>
+
+        <div class="pub-filter reveal" role="group" aria-label="Filter publications">
+          <button class="pub-filter__btn is-active" data-filter="all" id="pub-filter-all">All</button>
+          <button class="pub-filter__btn" data-filter="first" id="pub-filter-cofirst">First</button>
+          <button class="pub-filter__btn" data-filter="structural" id="pub-filter-structural">Structural</button>
+          <button class="pub-filter__btn" data-filter="review" id="pub-filter-review">Review</button>
+          <button class="pub-filter__btn" data-filter="web-resources" id="pub-filter-web">Web Resources</button>
+        </div>
+
+        <div class="pub-grid" id="pub-grid">
+
+
+          <article class="pub-card reveal" data-category="first structural" id="pub-actintpm">
+            <div class="pub-card__header">
+              <span class="pub-card__venue">bioRxiv &middot; 2026</span>
+            </div>
+            <h3 class="pub-card__title">Comparative Modelling of Actin&ndash;Tropomyosin Interfaces</h3>
+            <p class="pub-card__authors"><strong>Menon, R.</strong>, Balasubramanian, M., Sowdhamini, R.</p>
+            <span class="pub-card__role pub-card__role--cofirst">First</span>
+            <div class="pub-card__expand" id="pub-expand-actintpm" aria-hidden="true">
+              <div class="pub-card__abstract">
+                <p>A stepwise computational docking pipeline combining AlphaFold2-Multimer coiled-coil models,
+                  experimentally informed residue-level restraints, and pseudo-energy analysis via PPCheck to build and
+                  evaluate actin&ndash;tropomyosin co-polymer models for three isoforms: hTPM1, hTPM4, and
+                  <em>S. pombe</em> Cdc8. Interface energetics reveal a hierarchy in which the shortest filament
+                  (SpCdc8)
+                  achieves the most stabilizing actin contacts, consistent with reduced geometric penalty along the
+                  actin
+                  helix. Hotspot mapping identifies conserved acidic residues across all three isoforms, and modelling
+                  of
+                  four temperature-sensitive Cdc8 mutations shows these substitutions destabilize the coiled-coil dimer
+                  without significantly affecting actin interactions.
+                </p>
+              </div>
+            </div>
+            <div class="pub-card__footer">
+              <a href="https://doi.org/10.64898/2026.07.06.736648" class="pub-card__abstract-doi" target="_blank"
+                rel="noopener noreferrer">View preprint &nearr;</a>
+              <button class="pub-card__toggle" aria-expanded="false" aria-controls="pub-expand-actintpm"
+                id="pub-toggle-actintpm">abstract &#9662;</button>
+            </div>
+          </article>
+
+
+          <article class="pub-card reveal" data-category="web-resources" id="pub-grayu">
+            <div class="pub-card__header">
+              <span class="pub-card__venue">Frontiers in Pharmacology &middot; 2026</span>
+            </div>
+            <h3 class="pub-card__title">GRAYU: graph-based database integrating Ayurvedic formulations, medicinal
+              plants,
+              phytochemicals and diseases</h3>
+            <p class="pub-card__authors">Joshi, S.*, Pathak, A.*, Regati, D.R.*, <strong>Menon, R.</strong>, et al.</p>
+            <span class="pub-card__role pub-card__role--contributing">Contributing</span>
+            <div class="pub-card__expand" id="pub-expand-grayu" aria-hidden="true">
+              <div class="pub-card__abstract">
+                <p>Graph-based database linking Ayurvedic formulations, medicinal plants, phytochemicals, and diseases
+                  for
+                  network-based exploration. Contributed to data curation, analysis pipeline, and online documentation.
+                  Available at <a href="http://caps.ncbs.res.in/GRAYU" style="color:var(--accent)" target="_blank"
+                    rel="noopener noreferrer">caps.ncbs.res.in/GRAYU</a>.</p>
+              </div>
+            </div>
+            <div class="pub-card__footer">
+              <a href="https://doi.org/10.3389/fphar.2025.1727224" class="pub-card__abstract-doi" target="_blank"
+                rel="noopener noreferrer">View paper &nearr;</a>
+              <button class="pub-card__toggle" aria-expanded="false" aria-controls="pub-expand-grayu"
+                id="pub-toggle-grayu">abstract &#9662;</button>
+            </div>
+          </article>
+
+          <article class="pub-card reveal" data-category="first web-resources" id="pub-pass2">
+            <div class="pub-card__header">
+              <span class="pub-card__venue">Database &middot; 2025</span>
+            </div>
+            <h3 class="pub-card__title">PASS2: update of database of structure-based sequence alignments of protein
+              superfamilies</h3>
+            <p class="pub-card__authors"><strong>Menon, R.*, Nayak, S.*</strong>, Rajesh, R., Sowdhamini, R.</p>
+            <span class="pub-card__role pub-card__role--cofirst">First</span>
+            <div class="pub-card__expand" id="pub-expand-pass2" aria-hidden="true">
+              <div class="pub-card__abstract">
+                <p>Led the update of the PASS2 database (v8), encompassing <strong>26,690 protein domains</strong>
+                  across
+                  2,058 superfamilies. Drove the end-to-end pipeline for 1,244 multi-member superfamilies (90.4% success
+                  rate) and implemented k-means clustering to recover 79 problematic superfamilies.</p>
+              </div>
+            </div>
+            <div class="pub-card__footer">
+              <a href="https://doi.org/10.1093/database/baaf072" class="pub-card__abstract-doi" target="_blank"
+                rel="noopener noreferrer">View paper &nearr;</a>
+              <button class="pub-card__toggle" aria-expanded="false" aria-controls="pub-expand-pass2"
+                id="pub-toggle-pass2">abstract &#9662;</button>
+            </div>
+          </article>
+
+          <article class="pub-card reveal" data-category="first structural" id="pub-bifurcated">
+            <div class="pub-card__header">
+              <span class="pub-card__venue">Proteins &middot; 2025</span>
+            </div>
+            <h3 class="pub-card__title">Computational analyses of bifurcated inter-protein interactions in
+              protein&ndash;protein assemblies reveal their pivotal role in conferring stability</h3>
+            <p class="pub-card__authors"><strong>Menon, R.*, Bheemireddy, S.*</strong>, Chavali, S., Sowdhamini, R.,
+              Srinivasan, N.</p>
+            <span class="pub-card__role pub-card__role--cofirst">First</span>
+            <div class="pub-card__expand" id="pub-expand-bifurcated" aria-hidden="true">
+              <div class="pub-card__abstract">
+                <p>Large-scale computational survey of bifurcated inter-protein interactions &mdash; where a single
+                  residue contacts two partners simultaneously &mdash; across PDB assemblies, demonstrating their
+                  pivotal
+                  role in conferring complex stability. Originated as an MS thesis at IISER Tirupati / IISc.</p>
+              </div>
+            </div>
+            <div class="pub-card__footer">
+              <a href="https://doi.org/10.1002/prot.70090" class="pub-card__abstract-doi" target="_blank"
+                rel="noopener noreferrer">View paper &nearr;</a>
+              <button class="pub-card__toggle" aria-expanded="false" aria-controls="pub-expand-bifurcated"
+                id="pub-toggle-bifurcated">abstract &#9662;</button>
+            </div>
+          </article>
+
+          <article class="pub-card reveal" data-category="review" id="pub-evo">
+            <div class="pub-card__header">
+              <span class="pub-card__venue">Encyclopedia of Bioinformatics &middot; 2025</span>
+            </div>
+            <h3 class="pub-card__title">Evolution of Protein Families</h3>
+            <p class="pub-card__authors">Verma, S., Sharma, A., Pathak, A., <strong>Menon, R.</strong>, Sowdhamini, R.
+            </p>
+            <span class="pub-card__role pub-card__role--contributing">Contributing</span>
+            <div class="pub-card__expand" id="pub-expand-evo" aria-hidden="true">
+              <div class="pub-card__abstract">
+                <p>Encyclopedia chapter covering the structural and sequence basis of protein family classification,
+                  evolutionary divergence, and bioinformatics tools for phylogenetic analysis. <em>Encyclopedia of
+                    Bioinformatics and Computational Biology (2nd ed.)</em>, Vol. 3, pp. 99&ndash;110.</p>
+              </div>
+            </div>
+            <div class="pub-card__footer">
+              <a href="https://doi.org/10.1016/B978-0-323-95502-7.00144-5" class="pub-card__abstract-doi"
+                target="_blank" rel="noopener noreferrer">View chapter &nearr;</a>
+              <button class="pub-card__toggle" aria-expanded="false" aria-controls="pub-expand-evo"
+                id="pub-toggle-evo">abstract &#9662;</button>
+            </div>
+          </article>
+
+          <article class="pub-card reveal" data-category="review" id="pub-ppi">
+            <div class="pub-card__header">
+              <span class="pub-card__venue">Encyclopedia of Bioinformatics &middot; 2025</span>
+            </div>
+            <h3 class="pub-card__title">Prediction of Protein&ndash;Protein Interactions</h3>
+            <p class="pub-card__authors">Pathak, A., Tiwari, V., <strong>Menon, R.</strong>, Sowdhamini, R.</p>
+            <span class="pub-card__role pub-card__role--contributing">Contributing</span>
+            <div class="pub-card__expand" id="pub-expand-ppi" aria-hidden="true">
+              <div class="pub-card__abstract">
+                <p>Encyclopedia chapter covering computational methods for predicting protein&ndash;protein
+                  interactions,
+                  encompassing sequence-based, structure-based, and machine learning approaches. <em>Encyclopedia of
+                    Bioinformatics and Computational Biology (2nd ed.)</em>, Vol. 4, pp. 380&ndash;396.</p>
+              </div>
+            </div>
+            <div class="pub-card__footer">
+              <a href="https://doi.org/10.1016/B978-0-323-95502-7.00146-9" class="pub-card__abstract-doi"
+                target="_blank" rel="noopener noreferrer">View chapter &nearr;</a>
+              <button class="pub-card__toggle" aria-expanded="false" aria-controls="pub-expand-ppi"
+                id="pub-toggle-ppi">abstract &#9662;</button>
+            </div>
+          </article>
+
+          <article class="pub-card reveal" data-category="first structural" id="pub-tram">
+            <div class="pub-card__header">
+              <span class="pub-card__venue">Proteins &middot; 2024</span>
+            </div>
+            <h3 class="pub-card__title">Structural insights into the role of deleterious mutations at the dimeric
+              interface of Toll-like receptor interferon-&beta;-related adaptor protein</h3>
+            <p class="pub-card__authors"><strong>Menon, R.*, Verma, S.*</strong>, Sowdhamini, R.</p>
+            <span class="pub-card__role pub-card__role--cofirst">First</span>
+            <div class="pub-card__expand" id="pub-expand-tram" aria-hidden="true">
+              <div class="pub-card__abstract">
+                <p>Investigated how two dominant-negative mutations (P116H, C117H) at the TRAM homodimer BB loop
+                  abrogate
+                  TLR4-mediated innate immune signalling. Combined 200&thinsp;ns MD simulations, dynamic
+                  cross-correlation, and allosteric path analysis to reveal the structural basis for abrogated TRIF
+                  recruitment. Certified among the <strong>top 10% most-viewed papers</strong> published in
+                  <em>Proteins</em> (Jan&ndash;Dec 2024).
+                </p>
+              </div>
+            </div>
+            <div class="pub-card__footer">
+              <a href="https://doi.org/10.1002/prot.26707" class="pub-card__abstract-doi" target="_blank"
+                rel="noopener noreferrer">View paper &nearr;</a>
+              <button class="pub-card__toggle" aria-expanded="false" aria-controls="pub-expand-tram"
+                id="pub-toggle-tram">abstract &#9662;</button>
+            </div>
+          </article>
+
+        </div><!-- /pub-grid -->
+        <p class="publications__note reveal">* denotes co-first authorship<br />
+          <span style="margin-top:0.4rem;display:inline-block">Google Scholar<a
+              href="https://scholar.google.com/citations?user=lN27Lc8AAAAJ&hl=en&oi=ao" style="color:var(--accent)"
+              target="_blank"> &#x2197;</a></span>
+        </p>
+
+      </div><!-- /wid-panel-publications -->
+
+      <!-- ─── Panel 3: SciComm ─── -->
+      <div class="wid-panel" id="wid-panel-scicomm" role="tabpanel" aria-labelledby="wid-btn-scicomm"
+        aria-hidden="true">
+
+        <p class="section__subheading" style="margin-bottom: 2.5rem;">
+          My work outside research: teaching, editing, art, and science communication.
+        </p>
+
+        <div class="scicomm__grid">
+
+          <div class="scicomm__item reveal">
+            <div class="scicomm__body">
+              <h3 class="scicomm__title">Graduate Teaching Assistant: Statistical Inference in Biology</h3>
+              <p class="scicomm__desc">NCBS-TIFR &middot; 2022 &amp; 2023 (two iterations) &middot; 30&ndash;40 students
+                each &middot; Tutorials on MCMC, Bayesian inference, SVMs, neural networks, and regularisation.
+                Supervised
+                10+ student ML projects.</p>
+            </div>
+          </div>
+
+          <div class="scicomm__item reveal">
+            <div class="scicomm__body">
+              <h3 class="scicomm__title">Graduate Teaching Assistant: AI for Good and Evil</h3>
+              <p class="scicomm__desc">NCBS-TIFR &middot; 2024 &middot; Taught transformer architecture, LLMs, diffusion
+                models, prompt engineering, and AI ethics to a mixed STEM&thinsp;/&thinsp;non-STEM cohort. Hands-on
+                workshops with GPT-4, Claude, AlphaFold, and Django.</p>
+            </div>
+          </div>
+
+          <div class="scicomm__item reveal">
+            <div class="scicomm__body">
+              <h3 class="scicomm__title">Guest Lecturer: AI for Good and Evil, Structural Biology</h3>
+              <p class="scicomm__desc">NCBS-TIFR &middot; 2025 &middot; Delivered a specialist lecture on the
+                history of protein structure prediction, AlphaFold 2 and 3, their limitations, and live PyMol +
+                ColabFold
+                demonstrations.</p>
+            </div>
+          </div>
+
+          <div class="scicomm__item reveal">
+            <div class="scicomm__body">
+              <h3 class="scicomm__title">Manuscript &amp; Science News Editor</h3>
+              <p class="scicomm__desc">Formally acknowledged for editorial contributions to a published paper in
+                <em>Molecular Biology and Evolution</em> (2023)
+                <a href="https://doi.org/10.1093/molbev/msad033" class="scicomm__link" target="_blank"
+                  rel="noopener noreferrer" aria-label="View paper">&#x2197;</a>.
+                Edited a science news piece on the official NCBS website translating Parkinson&rsquo;s disease research
+                for a public audience
+                <a href="https://news.ncbs.res.in/research-explained/cellular-changes-linked-parkinson%E2%80%99s-disease-observed-cells-across-body"
+                  class="scicomm__link" target="_blank" rel="noopener noreferrer"
+                  aria-label="Read NCBS news piece">&#x2197;</a>.
+              </p>
+            </div>
+          </div>
+
+          <div class="scicomm__item reveal">
+            <div class="scicomm__body">
+              <h3 class="scicomm__title">Scientific Illustration</h3>
+              <p class="scicomm__desc">Hand-drew diagrams published in a peer-reviewed mathematics journal (2018)
+                &mdash;
+                <em>Mathematics Student</em>, 87(3&ndash;4), pp. 99&ndash;108. Created
+                original digital illustrations for the NCBS Open Day (2024) on octopus neurobiology and bat
+                physiology.
+              </p>
+            </div>
+          </div>
+
+          <div class="scicomm__item reveal">
+            <div class="scicomm__body">
+              <h3 class="scicomm__title">Editorial Leadership</h3>
+              <p class="scicomm__desc">Co-founder &amp; Managing Editor of <em>Inventa</em> &mdash; an inter-institute
+                science communication initiative (2021). Chief Editor of <em>Dhwani</em> (IISER Tirupati college
+                magazine, 2019&ndash;2020).</p>
+            </div>
+          </div>
+
+          <div class="scicomm__item reveal">
+            <div class="scicomm__body">
+              <h3 class="scicomm__title">Research Mentorship</h3>
+              <p class="scicomm__desc">Mentored 8 trainees across 4 years, covering structural analysis,
+                phylogeny, docking, molecular dyanmics, and protein interaction studies.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div><!-- /wid-panel-scicomm -->
+
+      <!-- ─── Panel 4: Playground ─── -->
+      <div class="wid-panel" id="wid-panel-playground" role="tabpanel" aria-labelledby="wid-btn-playground"
+        aria-hidden="true">
+
+        <p class="section__subheading" style="margin-bottom: 2.5rem;">
+          Where curiosity meets code. These are my unpolished weekend builds — a sandbox for learning new
+          things, breaking stuff, and having fun.
+        </p>
+
+        <div class="playground__grid">
+
+          <article class="playground-card playground-card--clickable reveal" id="pg-card-1"
+            onclick="window.open('ubuntu.html', '_blank')" role="button" tabindex="0"
+            aria-label="Open Ubuntu Desktop Environment"
+            onkeydown="if(event.key==='Enter'||event.key===' ')window.open('ubuntu.html','_blank')">
+            <div class="playground-card__emoji">🐧</div>
+            <h3 class="playground-card__title">Ubuntu Desktop</h3>
+            <p class="playground-card__desc">
+              Try out this website as an Ubuntu desktop!
+            </p>
+            <span class="playground-card__status">Live</span>
+          </article>
+
+          <article class="playground-card playground-card--clickable reveal" id="pg-card-2"
+            onclick="window.open('https://revathy-menon.github.io/fun-valentine-website/', '_blank')" role="button"
+            tabindex="0" aria-label="Open Catch Me If You Can website"
+            onkeydown="if(event.key==='Enter'||event.key===' ')window.open('https://revathy-menon.github.io/fun-valentine-website/','_blank')">
+            <div class="playground-card__emoji">❤️</div>
+            <h3 class="playground-card__title">Catch Me If You Can</h3>
+            <p class="playground-card__desc">
+              A Valentine's day request where the "No" button has a mind of its own and "Yes" is meant to be.
+            </p>
+            <span class="playground-card__status">Live</span>
+          </article>
+
+          <article class="playground-card reveal" id="pg-card-3">
+            <div class="playground-card__emoji">🌀</div>
+            <h3 class="playground-card__title">Coming Soon</h3>
+            <p class="playground-card__desc">
+              An excuse to learn something new and make it weird. Stay tuned.
+            </p>
+            <span class="playground-card__status">Sketch Phase</span>
+          </article>
+
+        </div>
+      </div><!-- /wid-panel-playground -->
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════  EXPERIENCE & SKILLS  ═══════════════════════ -->
+  <section class="section experience" id="experience">
+    <div class="container">
+      <span class="section__label reveal">Experience</span>
+      <h2 class="section__heading reveal">Background &amp; Skillset</h2>
+
+
+      <!-- Timeline -->
+      <div class="timeline">
+        <div class="timeline__item reveal">
+          <div class="timeline__marker"></div>
+          <div class="timeline__content">
+            <span class="timeline__date">2021 — Present</span>
+            <h3 class="timeline__title">PhD Researcher, NCBS-TIFR, Bengaluru</h3>
+            <p class="timeline__desc">
+              Computational exploration of protein-protein interactions: database curation (PASS2.8),
+              ML docking scorer (DockScore 2.0), webserver development (SODAPOP), molecular dynamics (TRAM), and
+              collaborative structural modelling (Actin-Tropomyosin).
+              <br><br>
+              Participation in other lab projects includes curating data on Ayurvedic formulations and plants (GRAYU)
+              and
+              transcriptome assembly and downstream DEG analysis.
+              CGPA 7.9/10; Grade A at all thesis evaluations.
+            </p>
+
+            <!-- Nested Experience -->
+            <div class="timeline timeline--nested">
+              <div class="timeline__item reveal">
+                <div class="timeline__marker timeline__marker--nested"></div>
+                <div class="timeline__content">
+                  <span class="timeline__date">2022 — 2024</span>
+                  <h3 class="timeline__title">Graduate Teaching Assistant, NCBS-TIFR, Bengaluru</h3>
+                  <p class="timeline__desc">
+                    Teaching Assistant for the course 'Statistical Inference in Biology' in 2022 and 2023,
+                    where I assisted in designing assignments, tutored students, and helped them with their final ML
+                    projects.
+                    Also TA for the course 'AI for Good and Evil' in 2024, where I designed assignments, tutorials, and
+                    in-class work.
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline__item reveal">
+                <div class="timeline__marker timeline__marker--nested"></div>
+                <div class="timeline__content">
+                  <span class="timeline__date">2022 — 2026</span>
+                  <h3 class="timeline__title">Lab Operations Lead, NCBS-TIFR, Bengaluru</h3>
+                  <p class="timeline__desc">
+                    Operations, procurement, and managing annual budgets. This involved cost negotiations with vendors,
+                    timely quality checks, resolving audit flags, and maximising fund utilisation across 5 years.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="timeline__item reveal">
+          <div class="timeline__marker"></div>
+          <div class="timeline__content">
+            <span class="timeline__date">2016 — 2021</span>
+            <h3 class="timeline__title">Integrated BS-MS, Indian Institute of Science Education and Research (IISER),
+              Tirupati
+            </h3>
+            <p class="timeline__desc">
+              Biology major with a computational MS thesis on bifurcated inter-protein interactions (co-first-author
+              publication). DST INSPIRE Scholar. Chief Editor of the college magazine; co-founder and managing director
+              of Inventa 2021.
+            </p>
+
+            <!-- Nested Experience -->
+            <div class="timeline timeline--nested">
+              <div class="timeline__item reveal">
+                <div class="timeline__marker timeline__marker--nested"></div>
+                <div class="timeline__content">
+                  <span class="timeline__date">Aug 2020 — May 2021</span>
+                  <h3 class="timeline__title">MS Thesis Researcher, Indian Institute of Science, Bengaluru / IISER
+                    Tirupati</h3>
+                  <p class="timeline__desc">
+                    <strong>Project:</strong> Bifurcated inter-protein interactions in protein complexes<br>
+                    <strong>Supervisors:</strong> Prof. Narayanaswamy Srinivasan &amp; Dr. Sreenivas Chavali
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline__item reveal">
+                <div class="timeline__marker timeline__marker--nested"></div>
+                <div class="timeline__content">
+                  <span class="timeline__date">Jun 2019 — Jul 2019</span>
+                  <h3 class="timeline__title">Research Intern, IISER Tirupati</h3>
+                  <p class="timeline__desc">
+                    <strong>Project:</strong> Influence of homorepeats on protein lengths in human and yeast<br>
+                    <strong>Supervisor:</strong> Dr. Sreenivas Chavali
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline__item reveal">
+                <div class="timeline__marker timeline__marker--nested"></div>
+                <div class="timeline__content">
+                  <span class="timeline__date">May 2018 — Jul 2018</span>
+                  <h3 class="timeline__title">Research Intern, National Centre for Biological Sciences (NCBS), Bengaluru
+                  </h3>
+                  <p class="timeline__desc">
+                    <strong>Project:</strong> Trait-demography relationships in Southern Indian tropical rainforest
+                    species; Western Ghats field work<br>
+                    <strong>Supervisor:</strong> Prof. Mahesh Sankaran
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline__item reveal">
+                <div class="timeline__marker timeline__marker--nested"></div>
+                <div class="timeline__content">
+                  <span class="timeline__date">May 2017 — Jun 2017</span>
+                  <h3 class="timeline__title">Research Intern, Institute of Mathematical Sciences (IMSc), Chennai</h3>
+                  <p class="timeline__desc">
+                    <strong>Project:</strong> Modeling dengue vectors <em>Aedes aegypti</em> and <em>Aedes
+                      albopictus</em><br>
+                    <strong>Supervisor:</strong> Prof. Gautam Menon
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Skills Grid -->
+      <!-- <h3 class="skills__heading reveal">Technical Arsenal</h3> -->
+      <div class="skills__grid">
+        <div class="skill-group reveal">
+          <h4 class="skill-group__title">Languages &amp; Frameworks</h4>
+          <div class="skill-group__tags">
+            <span>Python</span><span>R</span><span>SQL</span><span>PHP</span>
+            <span>HTML/CSS</span><span>JavaScript</span><span>Django</span><span>LaTeX</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h4 class="skill-group__title">Machine Learning</h4>
+          <div class="skill-group__tags">
+            <span>XGBoost</span><span>Random Forest</span><span>SVM</span><span>Neural Networks</span>
+            <span>GNNs</span><span>Knowledge Distillation</span><span>K-Means</span><span>MCMC</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h4 class="skill-group__title">Structural Biology</h4>
+          <div class="skill-group__tags">
+            <span>AlphaFold 2/3</span><span>GROMACS</span><span>LightDock</span><span>HADDOCK</span>
+            <span>PyMol</span><span>FoldX</span><span>PPCheck</span><span>ColabFold</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h4 class="skill-group__title">Data &amp; Analysis</h4>
+          <div class="skill-group__tags">
+            <span>Pandas</span><span>NumPy</span><span>scikit-learn</span><span>Matplotlib</span>
+            <span>BioPython</span><span>DESeq2</span><span>HMMER</span><span>BLAST</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════  ART  ═══════════════════════ -->
+  <section class="section art" id="art">
+    <div class="container">
+      <span class="section__label reveal">Art</span>
+      <h2 class="section__heading reveal">Gallery: Multi-media</h2>
+    </div>
+
+    <div class="art__slider-wrapper reveal">
+      <!-- Scrollable strip -->
+      <div class="art__strip" id="art-strip">
+        <!-- Add more images here as you collect your art. -->
+        <!-- PHOTOS: Replace or add src paths below with your actual artwork files. -->
+        <img src="./images/banyan.png" alt="Acrylic painting of a banyan tree" class="art__img" />
+        <img src="./images/cat.png" alt="Watercolour painting of a cat in a garden" class="art__img" />
+        <img src="./images/chai.png" alt="Acrylic painting of a glass of chai" class="art__img" />
+        <img src="./images/cherry.png" alt="Watercolour painting of cherries" class="art__img" />
+        <img src="./images/dog.png" alt="Charcoal sketch of Dobby the female dog" class="art__img" />
+        <img src="./images/flowers.png" alt="Pen sketch of flowers" class="art__img" />
+        <img src="./images/goldfish.png" alt="Watercolour painting of a koi fish" class="art__img" />
+        <img src="./images/howl.png" alt="Dot painting of a Howl from Howl's Moving Castle" class="art__img" />
+        <img src="./images/island.png" alt="Acrylic painting of a Hawaiian island" class="art__img" />
+        <img src="./images/leaf.png" alt="Acrylic painting of a leaf underwater" class="art__img" />
+        <img src="./images/mountain.png" alt="Acrylic painting of a mountain landscape" class="art__img" />
+        <img src="./images/plane.png" alt="Acrylic painting of a plane" class="art__img" />
+        <img src="./images/pond.png" alt="Watercolour painting of a pond" class="art__img" />
+        <img src="./images/spider.png" alt="Digital painting of a spider" class="art__img" />
+        <img src="./images/sunset.png" alt="Watercolour painting of a sunset" class="art__img" />
+        <img src="./images/waterfall.png" alt="Acrylic painting of Jog Falls in Karnataka" class="art__img" />
+      </div>
+    </div>
+
+    <div class="container">
+      <p class="art__note">For projects and availability, please contact me <a href="#contact"
+          class="art__note-link">here</a>.</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════  CONTACT  ═══════════════════════ -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="contact__layout">
+
+        <div class="contact__left">
+          <span class="section__label reveal">Contact</span>
+          <h2 class="section__heading reveal">Let's Connect</h2>
+          <p class="contact__text reveal">
+            Whether you want to talk science, collaboration, or opportunities &mdash; I'd love to hear from you.
+          </p>
+        </div>
+
+        <div class="reveal">
+          <div class="contact__sidebar" role="list">
+
+            <a href="mailto:revathymenon09@gmail.com" class="contact__sidebar-item" id="contact-email" role="listitem">
+              <div class="contact__sidebar-info">
+                <span class="contact__sidebar-platform">Email</span>
+                <span class="contact__sidebar-handle">revathymenon09@gmail.com</span>
+                <span class="contact__sidebar-desc">primary contact</span>
+              </div>
+              <span class="contact__sidebar-arrow" aria-hidden="true">&nearr;</span>
+            </a>
+
+            <a href="https://github.com/revathy-menon" target="_blank" rel="noopener noreferrer"
+              class="contact__sidebar-item" id="contact-github" role="listitem">
+              <div class="contact__sidebar-info">
+                <span class="contact__sidebar-platform">GitHub</span>
+                <span class="contact__sidebar-handle">revathy-menon</span>
+                <span class="contact__sidebar-desc">open-source code</span>
+              </div>
+              <span class="contact__sidebar-arrow" aria-hidden="true">&nearr;</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/revathy-menon/" target="_blank" rel="noopener noreferrer"
+              class="contact__sidebar-item" id="contact-linkedin" role="listitem">
+              <div class="contact__sidebar-info">
+                <span class="contact__sidebar-platform">LinkedIn</span>
+                <span class="contact__sidebar-handle">revathy-menon</span>
+                <span class="contact__sidebar-desc">professional network</span>
+              </div>
+              <span class="contact__sidebar-arrow" aria-hidden="true">&nearr;</span>
+            </a>
+
+            <a href="https://scholar.google.com/citations?user=lN27Lc8AAAAJ&hl=en&oi=ao" target="_blank"
+              rel="noopener noreferrer" class="contact__sidebar-item" id="contact-scholar" role="listitem">
+              <div class="contact__sidebar-info">
+                <span class="contact__sidebar-platform">Google Scholar</span>
+                <span class="contact__sidebar-handle">Revathy Menon</span>
+                <span class="contact__sidebar-desc">publications &amp; citations</span>
+              </div>
+              <span class="contact__sidebar-arrow" aria-hidden="true">&nearr;</span>
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════  FOOTER  ═══════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__text">
+        Designed &amp; built by <strong>Revathy Menon</strong> · © 2026
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
