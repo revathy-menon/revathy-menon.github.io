@@ -208,9 +208,10 @@
             <div class="card__tag">Machine Learning · Docking</div>
             <h3 class="card__title">DockScore 2.0</h3>
             <p class="card__desc">
-              ML-augmented protein–protein docking scorer. Benchmarked XGBoost, Random Forest, SVMs, and
-              knowledge-distilled neural networks across 257 complexes and 100K+ decoys — achieving an F1 of 0.91 and
-              Spearman's ρ of 0.70.
+              ML-augmented protein–protein docking scorer, with a two-stage cascade. 
+              The first XGBoost stage predicts CAPRI quality and filters out predicted incorrect decoys. 
+              The second GNN stage ranks the surviving decoys.
+              Benchmarked on CAPRI Scoreset v2022 across 257 complexes and 100K+ decoys.
             </p>
             <ul class="card__tech">
               <li>Python</li>
@@ -1048,22 +1049,22 @@
       <div class="art__strip" id="art-strip">
         <!-- Add more images here as you collect your art. -->
         <!-- PHOTOS: Replace or add src paths below with your actual artwork files. -->
-        <img src="banyan.png" alt="Acrylic painting of a banyan tree" class="art__img" />
-        <img src="cat.png" alt="Watercolour painting of a cat in a garden" class="art__img" />
-        <img src="chai.png" alt="Acrylic painting of a glass of chai" class="art__img" />
-        <img src="cherry.png" alt="Watercolour painting of cherries" class="art__img" />
-        <img src="dog.png" alt="Charcoal sketch of Dobby the female dog" class="art__img" />
-        <img src="flowers.png" alt="Pen sketch of flowers" class="art__img" />
-        <img src="goldfish.png" alt="Watercolour painting of a koi fish" class="art__img" />
-        <img src="howl.png" alt="Dot painting of a Howl from Howl's Moving Castle" class="art__img" />
-        <img src="island.png" alt="Acrylic painting of a Hawaiian island" class="art__img" />
-        <img src="leaf.png" alt="Acrylic painting of a leaf underwater" class="art__img" />
-        <img src="mountain.png" alt="Acrylic painting of a mountain landscape" class="art__img" />
-        <img src="plane.png" alt="Acrylic painting of a plane" class="art__img" />
-        <img src="pond.png" alt="Watercolour painting of a pond" class="art__img" />
-        <img src="spider.png" alt="Digital painting of a spider" class="art__img" />
-        <img src="sunset.png" alt="Watercolour painting of a sunset" class="art__img" />
-        <img src="waterfall.png" alt="Acrylic painting of Jog Falls in Karnataka" class="art__img" />
+        <img src="./banyan.png" alt="Acrylic painting of a banyan tree" class="art__img" />
+        <img src="./cat.png" alt="Watercolour painting of a cat in a garden" class="art__img" />
+        <img src="./chai.png" alt="Acrylic painting of a glass of chai" class="art__img" />
+        <img src="./cherry.png" alt="Watercolour painting of cherries" class="art__img" />
+        <img src="./dog.png" alt="Charcoal sketch of Dobby the female dog" class="art__img" />
+        <img src="./flowers.png" alt="Pen sketch of flowers" class="art__img" />
+        <img src="./goldfish.png" alt="Watercolour painting of a koi fish" class="art__img" />
+        <img src="./howl.png" alt="Dot painting of a Howl from Howl's Moving Castle" class="art__img" />
+        <img src="./island.png" alt="Acrylic painting of a Hawaiian island" class="art__img" />
+        <img src="./leaf.png" alt="Acrylic painting of a leaf underwater" class="art__img" />
+        <img src="./mountain.png" alt="Acrylic painting of a mountain landscape" class="art__img" />
+        <img src="./plane.png" alt="Acrylic painting of a plane" class="art__img" />
+        <img src="./pond.png" alt="Watercolour painting of a pond" class="art__img" />
+        <img src="./spider.png" alt="Digital painting of a spider" class="art__img" />
+        <img src="./sunset.png" alt="Watercolour painting of a sunset" class="art__img" />
+        <img src="./waterfall.png" alt="Acrylic painting of Jog Falls in Karnataka" class="art__img" />
       </div>
     </div>
 
