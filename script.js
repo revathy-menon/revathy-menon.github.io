@@ -11,9 +11,10 @@
   const body = document.body;
   const toggle = document.getElementById('theme-toggle');
 
-  // Determine initial theme: saved preference → default to dark
+  // Determine initial theme: saved preference → system preference → default to dark
   const savedTheme = localStorage.getItem('theme');
-  const initialTheme = savedTheme || 'dark';
+  const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const initialTheme = savedTheme || (systemDark ? 'dark' : 'light');
   body.setAttribute('data-theme', initialTheme);
 
   toggle.addEventListener('click', () => {
